@@ -1,0 +1,36 @@
+.contact-container{
+    /* border-top: 1px solid #ddd; */
+    /* position: fixed;*/
+
+    width: 100%;
+    background-color: #ddd;
+    padding-top: 20px;
+
+}
+.contactBody{
+    margin-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.contactBody a{
+    color: #333;
+    text-decoration: none;
+}
+
+.LinkedIn{
+    display: flex;
+}
+.LinkedIn img{
+    height: 30px;
+    width: 30px;
+}
+
+.Github{
+    display: flex;
+}
+.Github img{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}

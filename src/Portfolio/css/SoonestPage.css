@@ -1,0 +1,42 @@
+.soonest-container {
+    max-width: 800px; /* Restrict the width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding around the container */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.soonest-container h1 {
+    text-align: center; /* Center the main title */
+    color: #333; /* Dark text for better readability */
+}
+
+.soonest-container img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.exp-container, .tech-container, .post-container {
+    margin-bottom: 20px; /* Space between sections */
+    padding: 15px; /* Padding within each section */
+    border: 1px solid #ddd; /* Light border around sections */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background for sections */
+}
+
+h3 {
+    color: #0056b3; /* Blue color for section headers */
+}
+
+h4 {
+    color: #555; /* Darker gray for roles */
+    margin-top: 10px; /* Space above role */
+}
+
+p {
+    line-height: 1.6; /* Increase line height for readability */
+    color: #666; /* Medium gray for paragraph text */
+}
