@@ -9,6 +9,7 @@ import PortfolioMainPage from './Portfolio/PortfolioMainPage';
 import Contact from './Portfolio/components/Contact';
 import AppleProject from './Portfolio/components/AppleProject';
 
+
 // import TodoWrapper from './toDoComponents/TodoWrapper'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       {/* <AppleProject/> */}
       <PortfolioMainPage className="mainPagePart"/>
       <Contact/>
+      {/* <EMovie/> */}
     </div>
   );
 }

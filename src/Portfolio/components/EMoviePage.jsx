@@ -1,9 +1,15 @@
 import React from 'react'
 import em from '../../images/EMovie.jpg'
-const EMovie = () => {
+import { useNavigate } from 'react-router-dom';
+
+const EMoviePage = () => {
+  const navigate = useNavigate();
+  const handleSubmit = () => {
+    navigate('/EMovie');
+  };
   return (
-    <div>
-        <h1>EMovie Project</h1>
+    <div className='eContainer'>
+        <h1 className='eH1' onClick={handleSubmit}>EMovie Project</h1>
         <img src={em} alt="EMovie-pic" />
         <div className='exp-container'>
             <h3>Experience Description:</h3>
@@ -14,4 +20,4 @@ const EMovie = () => {
   )
 }
 
-export default EMovie
+export default EMoviePage
