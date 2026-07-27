@@ -1,0 +1,19 @@
+Nav .nav-auto {
+    display: flex ;
+    justify-content: center ;
+}
+
+/* Header.css */
+.navbar {
+    transition: all 0.3s; /* 添加过渡效果 */
+}
+
+.navbar-collapse {
+    flex-direction: column; /* 在小屏幕上使导航项纵向排列 */
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #343a40; /* 与 navbar 背景颜色一致 */
+    }
+}

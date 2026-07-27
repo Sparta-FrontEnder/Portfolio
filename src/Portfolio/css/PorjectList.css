@@ -1,0 +1,19 @@
+  .card-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    list-style: none;
+    flex-direction: column; /* 将容器设置为列方向 */
+    /* justify-content: space-around; */
+    align-items: center; /* 水平居中对齐内容 */
+  }
+  
+  .cardList {
+    display: flex;
+    justify-content: space-between ; /* 水平居中卡片 */
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 16px; /* 卡片之间的间距 */
+    padding: 16px; /* 内边距 */
+  }
+  
+  

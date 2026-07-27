@@ -1,0 +1,71 @@
+li{
+    list-style: none;
+}
+
+.card{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body{
+    padding: 1rem;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.card-desc{
+    font-size: 1rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+@media (min-width: 1200px) {
+    .cardList li {
+        width: calc(25% - 32px); /* 4 个卡片每行 */
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cardList li {
+        width: calc(33.33% - 32px); /* 3 个卡片每行 */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cardList li {
+        width: calc(50% - 32px); /* 2 个卡片每行 */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .cardList li {
+        width: calc(100% - 100px); /* 1 个卡片每行 */
+    }
+}
+
+@media (max-width: 575px) {
+    .cardList li {
+        width: calc(100% - 100px); /* 1 个卡片每行 */
+    }
+}

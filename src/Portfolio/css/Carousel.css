@@ -1,0 +1,14 @@
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #555; /* Change on hover */
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #333; /* Change the color of the indicators */
+}
