@@ -1,13 +1,127 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "tailwindcss";
+
+@import "@fontsource/geist-sans/400.css";
+@import "@fontsource/geist-sans/500.css";
+@import "@fontsource/geist-sans/600.css";
+@import "@fontsource/source-serif-4/400.css";
+@import "@fontsource/source-serif-4/400-italic.css";
+@import "@fontsource/source-serif-4/600.css";
+
+/*
+  Radius scale (locked, do not mix):
+  - buttons / pills / tags -> rounded-full
+  - cards / panels          -> rounded-2xl (16px)
+  - inputs                  -> rounded-lg (8px)
+*/
+
+@theme {
+  --font-sans: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+
+  --color-bg: #f5f3ec;
+  --color-bg-raised: #fbfaf5;
+  --color-ink: #1c1a15;
+  --color-ink-muted: #6b6656;
+  --color-line: #e1ddcf;
+  --color-clay: #bf5b37;
+  --color-clay-strong: #a24b2c;
+  --color-clay-soft: #f1ded3;
+
+  --color-bg-dark: #17150f;
+  --color-bg-raised-dark: #1f1c15;
+  --color-ink-dark: #ede8db;
+  --color-ink-muted-dark: #a39c87;
+  --color-line-dark: #322e23;
+  --color-clay-dark: #e0916b;
+  --color-clay-soft-dark: #3a2419;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    color-scheme: light dark;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: var(--color-bg-dark);
+      color: var(--color-ink-dark);
+    }
+  }
+
+  ::selection {
+    background: var(--color-clay-soft);
+    color: var(--color-clay-strong);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    ::selection {
+      background: var(--color-clay-soft-dark);
+      color: var(--color-clay-dark);
+    }
+  }
+}
+
+@layer components {
+  .text-ink {
+    color: var(--color-ink);
+  }
+  .text-muted {
+    color: var(--color-ink-muted);
+  }
+  .text-accent {
+    color: var(--color-clay);
+  }
+  .bg-page {
+    background: var(--color-bg);
+  }
+  .bg-surface {
+    background: var(--color-bg-raised);
+  }
+  .bg-accent {
+    background: var(--color-clay);
+  }
+  .border-hairline {
+    border-color: var(--color-line);
+  }
+  .font-display {
+    font-family: var(--font-serif);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .text-ink {
+      color: var(--color-ink-dark);
+    }
+    .text-muted {
+      color: var(--color-ink-muted-dark);
+    }
+    .text-accent {
+      color: var(--color-clay-dark);
+    }
+    .bg-page {
+      background: var(--color-bg-dark);
+    }
+    .bg-surface {
+      background: var(--color-bg-raised-dark);
+    }
+    .bg-accent {
+      background: var(--color-clay-dark);
+    }
+    .border-hairline {
+      border-color: var(--color-line-dark);
+    }
+  }
 }
