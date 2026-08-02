@@ -1,9 +1,11 @@
 import { useRef } from 'react'
-import { ArrowSquareOut } from '@phosphor-icons/react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ArrowSquareOut } from '@phosphor-icons/react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import { linkedProjects, internalProjects } from '../data/projects'
+import { linkedProjects, aiProjects, internalProjects } from '../data/projects'
 
 function ProjectCard({ project }) {
+  const link = project.link
   return (
     <article className="reveal flex flex-col rounded-2xl border border-hairline bg-surface p-8">
       <p className="text-xs uppercase tracking-[0.14em] text-accent">{project.category}</p>
@@ -16,17 +18,25 @@ function ProjectCard({ project }) {
           </span>
         ))}
       </div>
-      {project.link && (
+      {link?.internal ? (
+        <Link
+          to={link.href}
+          className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent"
+        >
+          {link.label}
+          <ArrowRight size={15} />
+        </Link>
+      ) : link ? (
         <a
-          href={project.link.href}
+          href={link.href}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent"
         >
-          {project.link.label}
+          {link.label}
           <ArrowSquareOut size={15} />
         </a>
-      )}
+      ) : null}
     </article>
   )
 }
@@ -43,6 +53,18 @@ export default function Projects() {
       </h1>
 
       <section className="mt-16">
+        <h2 className="reveal font-display text-2xl text-ink md:text-3xl">AI systems</h2>
+        <p className="reveal mt-2 max-w-xl text-sm text-muted">
+          Multi-agent delivery, verification loops, and applied AI products.
+        </p>
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {aiProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-20 border-t border-hairline pt-16">
         <h2 className="reveal font-display text-2xl text-ink md:text-3xl">Linked work</h2>
         <p className="reveal mt-2 max-w-xl text-sm text-muted">
           Projects with a live site or public source link.

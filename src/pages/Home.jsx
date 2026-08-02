@@ -6,7 +6,7 @@ import { ArrowRight } from '@phosphor-icons/react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { projects } from '../data/projects'
 
-const featuredIds = ['apple-cms', 'multi-store-erp', 'cozy-nook']
+const featuredIds = ['agent-harness', 'apple-cms', 'multi-store-erp']
 const featured = featuredIds
   .map((id) => projects.find((p) => p.id === id))
   .filter(Boolean)

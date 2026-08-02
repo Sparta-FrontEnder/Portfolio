@@ -133,22 +133,19 @@ export const linkedProjects = [
   },
 ]
 
-export const internalProjects = [
+export const aiProjects = [
   {
-    id: 'figma-to-code-harness',
-    title: 'Figma-to-Code Delivery Harness',
-    category: 'AI / Enterprise systems',
+    id: 'agent-harness',
+    title: 'agent-harness',
+    category: 'AI / Multi-agent systems',
     description:
-      'A multi-agent delivery harness that turns Figma designs into code: agents work in parallel, then run automated verification. Roughly 70% of the build path and 80% of verification are automated.',
-    stack: ['Multi-agent', 'Figma', 'Automated verify'],
-  },
-  {
-    id: 'loan-tools',
-    title: 'loan-tools',
-    category: 'Enterprise systems',
-    description:
-      'Internal management software built for StarlinkMortgage: customer records, inquiry tracking, notifications, and quote management, running the operations behind the storefront.',
-    stack: ['Next.js', 'Vercel'],
+      'A local WordPress / Elementor delivery engine that turns Figma-to-widget work into an observable state machine: build batches, deterministic gates before the LLM, fresh-session verifiers, hard stops on dispute, page-level human approval, and promote so recurring rules flow back into checks and skills. One harness on disk; client repos keep only .pipeline/ config and symlinked craft skills.',
+    stack: ['Node.js', 'Multi-agent', 'Figma MCP', 'WordPress', 'Elementor', 'Claude CLI'],
+    link: {
+      href: '/blog/agent-harness-architecture',
+      label: 'Architecture notes',
+      internal: true,
+    },
   },
   {
     id: 'dual-agent-reporting',
@@ -165,6 +162,17 @@ export const internalProjects = [
     description:
       'Indexed a ~400-page internal document corpus into a vector store and built a natural-language query layer on DeepSeek, deployed on AWS to speed up quoting and customer-service lookups.',
     stack: ['AWS', 'DeepSeek', 'Vector DB'],
+  },
+]
+
+export const internalProjects = [
+  {
+    id: 'loan-tools',
+    title: 'loan-tools',
+    category: 'Enterprise systems',
+    description:
+      'Internal management software built for StarlinkMortgage: customer records, inquiry tracking, notifications, and quote management, running the operations behind the storefront.',
+    stack: ['Next.js', 'Vercel'],
   },
   {
     id: 'multi-store-erp',
@@ -192,5 +200,5 @@ export const internalProjects = [
   },
 ]
 
-/** Combined list — home featured picks by id from internal work. */
-export const projects = [...linkedProjects, ...internalProjects]
+/** Combined list — home featured picks by id from AI + internal work. */
+export const projects = [...linkedProjects, ...aiProjects, ...internalProjects]

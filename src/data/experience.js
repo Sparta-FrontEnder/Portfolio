@@ -7,8 +7,21 @@ export const roles = [
     location: 'Austin, TX',
     oneLiner:
       'Engineering half of a two-person design studio. Own architecture and delivery for AI systems, an ERP platform, and 15+ client web builds sold through social content in China and the US.',
-    stack: ['Next.js', 'React', 'C# / .NET', 'Spring Boot', 'Claude API', 'DeepSeek', 'AWS', 'Redis', 'Shopify', 'WordPress'],
+    stack: [
+      'Next.js',
+      'React',
+      'C# / .NET',
+      'Spring Boot',
+      'Claude API',
+      'DeepSeek',
+      'AWS',
+      'Redis',
+      'Shopify',
+      'WordPress',
+      'Multi-agent',
+    ],
     highlights: [
+      'Built agent-harness, a reusable multi-agent delivery engine for WordPress / Elementor work: orchestrated build→gate→verify→fix loops, fresh-session verification, dispute hard-stops, page-level human approval, and rule promotion so recurring defects become deterministic checks across projects.',
       'Designed a dual-agent Claude reporting pipeline (generate, then independently validate) behind a .NET/Next.js ops dashboard for a telecom device-repair client, cutting report turnaround from 2+ hours to one click.',
       'Built an AWS-deployed RAG knowledge base over a ~400-page internal document corpus, answering quoting and customer-service questions in natural language via DeepSeek.',
       'Architected a multi-store ERP (Spring Boot, Next.js, Redis, AWS) for a three-location retail business, using distributed locking to keep concurrent staff edits consistent.',
