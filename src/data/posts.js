@@ -2,12 +2,31 @@ import architectureEn from '../../blog/agent-harness-architecture.en.md?raw'
 import architectureZh from '../../blog/agent-harness-architecture.zh.md?raw'
 import reflectionsEn from '../../blog/ai-workflow-reflections.en.md?raw'
 import reflectionsZh from '../../blog/ai-workflow-reflections.zh.md?raw'
+import agiOptimismEn from '../../blog/agi-cautious-optimism.en.md?raw'
+import agiOptimismZh from '../../blog/agi-cautious-optimism.zh.md?raw'
 
 function stripLeadingTitle(markdown) {
   return markdown.replace(/^#\s+.+\n+/, '').trim()
 }
 
 export const posts = [
+  {
+    slug: 'agi-cautious-optimism',
+    category: 'Perspectives',
+    date: '2026-08-04',
+    titles: {
+      en: 'Is AGI Really as Frightening as We Imagine?',
+      zh: 'AGI 真的有我们想象中那么可怕吗？',
+    },
+    excerpts: {
+      en: 'AI risk deserves serious attention, but worst-case scenarios are not settled outcomes. A case for capability and safety evolving together.',
+      zh: 'AI 风险值得严肃对待，但最坏情景并非确定结局。技术能力与安全机制应当同步演进。',
+    },
+    body: {
+      en: stripLeadingTitle(agiOptimismEn),
+      zh: stripLeadingTitle(agiOptimismZh),
+    },
+  },
   {
     slug: 'agent-harness-architecture',
     category: 'Architecture',
