@@ -195,7 +195,7 @@ export const internalProjects = [
     title: 'studio-pm',
     category: 'Enterprise systems',
     description:
-      'Internal operations platform for a two-person studio: a drag-and-drop project progress dashboard and self-serve client records, so day-to-day updates don’t depend on filing an engineering ticket.',
+      'Internal studio operations platform with a project progress dashboard, client management, and accounting tools for tracking day-to-day work and finances in one place.',
     stack: ['Express', 'React', 'SQLite'],
   },
 ]
