@@ -4,12 +4,31 @@ import reflectionsEn from '../../blog/ai-workflow-reflections.en.md?raw'
 import reflectionsZh from '../../blog/ai-workflow-reflections.zh.md?raw'
 import agiOptimismEn from '../../blog/agi-cautious-optimism.en.md?raw'
 import agiOptimismZh from '../../blog/agi-cautious-optimism.zh.md?raw'
+import businessValueEn from '../../blog/business-knowledge-is-more-valuable.en.md?raw'
+import businessValueZh from '../../blog/business-knowledge-is-more-valuable.zh.md?raw'
 
 function stripLeadingTitle(markdown) {
   return markdown.replace(/^#\s+.+\n+/, '').trim()
 }
 
 export const posts = [
+  {
+    slug: 'business-knowledge-is-more-valuable',
+    category: 'Engineering',
+    date: '2026-08-11',
+    titles: {
+      en: 'A Company Engineer Thought Her Job Title Was Wrong',
+      zh: '公司程序员以为她的 Title 写错了',
+    },
+    excerpts: {
+      en: 'A data scientist with no full-app experience built a production system that became a company template, with AI drafts and senior engineering guidance.',
+      zh: '一位从未开发过完整应用的 Data Scientist，在 AI 和资深工程师指导下，做出了全公司的样板产品。',
+    },
+    body: {
+      en: stripLeadingTitle(businessValueEn),
+      zh: stripLeadingTitle(businessValueZh),
+    },
+  },
   {
     slug: 'agi-cautious-optimism',
     category: 'Perspectives',
